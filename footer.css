@@ -204,7 +204,7 @@
 
 @media (max-width: 470px) {
   .main-footer .footer-nav .navbar-nav .nav-item .dropdown {
-    top: 4px;
+    top: 3.4px;
   }
 
   .main-footer .footer-nav .navbar-nav .nav-item .dropdown .drop-btn {
