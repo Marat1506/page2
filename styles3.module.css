@@ -238,8 +238,8 @@
   margin-right: -10px;
   z-index: 1;
   flex: 1;
-  padding-top: 0.6rem;
-  padding-bottom: 0.6rem;
+  padding-top: 0.56rem;
+  padding-bottom: 0.56rem;
   border-top-right-radius: 15px !important;
   border-bottom-right-radius: 15px !important;
 }
@@ -257,14 +257,15 @@
   background-color: white;
   color: black;
   border: 1px solid white;
-  border-radius: 15px !important;
+  border-radius: 16.85px!important;
   margin-left: -15px !important;
   font-weight: 600;
   font-size: 19px;
   z-index: 3;
   position: relative;
-  border-top-left-radius: 15px !important;
-  border-bottom-left-radius: 15px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .content3 .input-group .custom-btn:hover {
@@ -358,9 +359,9 @@
 
 @media (max-width: 768px) {
   .content3 .fixed-width-btn {
-    width: 70px !important;
-    min-width: 70px !important;
-    max-width: 70px !important;
+    width: 59px !important;
+    min-width: 59px !important;
+    max-width: 59px !important;
   }
 
   .content3 .input-group .custom-input {
@@ -370,7 +371,7 @@
 
   .content3 .input-group .custom-btn {
     min-width: 70px;
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 
