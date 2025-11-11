@@ -257,7 +257,7 @@
   background-color: white;
   color: black;
   border: 1px solid white;
-  border-radius: 16.85px!important;
+  border-radius: 16.85px !important;
   margin-left: -15px !important;
   font-weight: 600;
   font-size: 19px;
@@ -367,6 +367,12 @@
   .content3 .input-group .custom-input {
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(14.53px);
+    font-size: 12px;
+  }
+
+  .content3 .input-group .custom-input::placeholder {
+    font-size: 12px;
+
   }
 
   .content3 .input-group .custom-btn {
