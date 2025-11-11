@@ -546,7 +546,7 @@
   }
 }
 
-@media (max-width: 410px) {
+@media (max-width: 405px) {
   .content3 .cards3 .card .card-img-top {
     max-height: 50px;
   }
