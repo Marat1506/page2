@@ -497,10 +497,11 @@
   .main-footer .footer-nav .navbar-nav .dropdown .dropdown-menu {
     background-color: black;
   }
-   .main-footer .footer-nav .navbar-nav .dropdown .dropdown-menu .dropdown-item {
+
+  .main-footer .footer-nav .navbar-nav .dropdown .dropdown-menu .dropdown-item {
     color: gray !important;
     font-size: 10px;
-   }
+  }
 
   .main-footer .navbar-nav {
     flex-direction: row;
@@ -515,6 +516,10 @@
     font-size: 14px;
     padding: 0.8rem 0;
     display: block;
+  }
+
+  .main-footer .footer-nav .navbar-nav .nav-item .dropdown .drop-btn {
+    font-size: 14px;
   }
 
   .main-footer .custom-select-wrapper {
