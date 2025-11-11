@@ -5,6 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
+    <script>
+        // Предотвращение автозума на iOS - выполняется сразу после viewport meta tag
+        (function () {
+            var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream ||
+                (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
+            if (isIOS) {
+                function setViewport() {
+                    var viewport = document.querySelector('meta[name="viewport"]');
+                    if (viewport) {
+                        var content = viewport.getAttribute('content');
+                        if (content && content.indexOf('maximum-scale') === -1) {
+                            viewport.setAttribute('content', content + ', maximum-scale=1.0');
+                        }
+                        return true;
+                    }
+                    return false;
+                }
+                if (!setViewport()) {
+                    setTimeout(setViewport, 0);
+                }
+            }
+        })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -587,7 +611,7 @@
                         <p class="card-title">ADSS UK ENGLISH OPEN
                             CHAMPIONSHIPS 2025Предстоящие
                             Прошедшие турниры</p>
-                       <div class="d-flex flex-column gap-2">
+                        <div class="d-flex flex-column gap-2">
                             <p class="card-text">Coventry, United Kingdom</p>
                             <div class="d-flex justify-content-between">
                                 <p class="card-text">26 апреля</p>
@@ -618,7 +642,7 @@
                         <p class="card-title">ADSS UK ENGLISH OPEN
                             CHAMPIONSHIPS 2025Предстоящие
                             Прошедшие турниры</p>
-                       <div class="d-flex flex-column gap-2">
+                        <div class="d-flex flex-column gap-2">
                             <p class="card-text">Coventry, United Kingdom</p>
                             <div class="d-flex justify-content-between">
                                 <p class="card-text">26 апреля</p>
@@ -634,7 +658,7 @@
                         <p class="card-title">ADSS UK ENGLISH OPEN
                             CHAMPIONSHIPS 2025Предстоящие
                             Прошедшие турниры</p>
-                       <div class="d-flex flex-column gap-2">
+                        <div class="d-flex flex-column gap-2">
                             <p class="card-text">Coventry, United Kingdom</p>
                             <div class="d-flex justify-content-between">
                                 <p class="card-text">26 апреля</p>
