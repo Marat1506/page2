@@ -755,6 +755,15 @@
     padding-bottom: 1.45rem;
   }
 }
+@media (max-width: 410px) {
+  .header.header-responsive {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
+}
+
 
 @media (min-width: 992px) {
   .header .navbar .container-fluid {
