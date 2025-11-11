@@ -30,6 +30,8 @@
   align-items: center;
 }
 
+
+
 .header.header-responsive {
   padding-left: 3.5rem;
   padding-right: 3.5rem;
@@ -49,7 +51,8 @@
 
 .header .navbar .container-fluid .logo-container {
   position: relative;
-  z-index: 10001; /* Выше sidebar (z-index: 9999), чтобы логотип был виден поверх */
+  z-index: 10001;
+  /* Выше sidebar (z-index: 9999), чтобы логотип был виден поверх */
 }
 
 .header .navbar .container-fluid .logo-container .header-logo {
@@ -107,7 +110,8 @@
   margin-left: auto;
   gap: 1rem;
   position: relative;
-  z-index: 10001; /* Выше sidebar (z-index: 9999), чтобы флаг и бутерброд были видны поверх */
+  z-index: 10001;
+  /* Выше sidebar (z-index: 9999), чтобы флаг и бутерброд были видны поверх */
 }
 
 .header .right-actions .dropdown .drop_btn_flag {
@@ -178,7 +182,8 @@
   border: 1px solid #ddd;
   border-radius: 9px;
   left: -55px;
-  z-index: 10002; /* Выше элементов header, чтобы dropdown был виден поверх sidebar */
+  z-index: 10002;
+  /* Выше элементов header, чтобы dropdown был виден поверх sidebar */
 }
 
 .header .right-actions .dropdown-item {
@@ -555,7 +560,8 @@
   flex: 1;
   border: none;
   background-color: rgba(39, 40, 40, 1);
-  border-radius: 20px; /* Неактивная кнопка */
+  border-radius: 20px;
+  /* Неактивная кнопка */
   transition: all 0.3s ease;
   position: relative;
   z-index: 1;
@@ -580,9 +586,10 @@
   border: none;
   background: transparent;
   color: #fff;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
-  border-radius: inherit; /* Наследует от родителя (.toggle-btn) */
+  border-radius: inherit;
+  /* Наследует от родителя (.toggle-btn) */
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -598,7 +605,8 @@
 .toggle-btn.active {
   background-color: #fff;
   z-index: 3;
-  border-radius: 16.85px; /* Активная кнопка */
+  border-radius: 16.85px;
+  /* Активная кнопка */
 }
 
 .toggle-btn.active .btn-inner {
@@ -738,6 +746,7 @@
 .hero-buttons {
   margin-top: 3rem;
 }
+
 /* Media Queries for Header */
 
 @media (min-width: 1537px) {
@@ -755,6 +764,7 @@
     padding-bottom: 1.45rem;
   }
 }
+
 @media (max-width: 435px) {
   .header.header-responsive {
     padding-left: 1rem;
@@ -763,6 +773,7 @@
     padding-bottom: 1.29rem;
   }
 }
+
 @media (max-width: 410px) {
   .header.header-responsive {
     padding-left: 1rem;
@@ -771,6 +782,22 @@
     padding-bottom: 1.2rem;
   }
 }
+
+@media (max-width: 435px) {
+  .header_sidebar {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 410px) {
+  .header_sidebar {
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+  }
+}
+
+
 
 
 @media (min-width: 992px) {
@@ -1560,7 +1587,7 @@
   }
 
   .btn-inner {
-    font-size: 13px;
+    font-size: 12.18px;
   }
 
   .auth-toggle {
