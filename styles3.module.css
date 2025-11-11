@@ -17,8 +17,8 @@
 @media (max-width: 768px) {
   .content3 {
     margin-top: 8rem;
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 }
 
@@ -88,6 +88,7 @@
 .content3 .content3_header .btn_two.btn-light.active {
   background-color: #ffffff;
   color: #000000;
+  font-weight: 600 !important;
 }
 
 .content3 .content3_header .btn-right {
@@ -212,6 +213,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 12px;
+    font-weight: 600;
     /* Уменьшаем шрифт */
   }
 
@@ -643,12 +645,12 @@
 
 .content3 .footer-pagination .footer-pagination-right .circle-arrow-btn:hover .arrow-white {
   opacity: 0;
-  
+
 }
 
 .content3 .footer-pagination .footer-pagination-right .circle-arrow-btn:hover .arrow-black {
   opacity: 1;
-  
+
 }
 
 .content3 .footer-pagination .footer-pagination-right .circle-arrow-btn:active {
@@ -676,7 +678,9 @@
   }
 
   .content3 .footer-pagination .footer-pagination-right .circle-arrow-btn .arrow-icon {
-  width: 19px;
-  height: 19px;
-}
+    width: 19px;
+    height: 19px;
+  }
+
+ 
 }
