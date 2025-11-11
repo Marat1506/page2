@@ -53,7 +53,7 @@
 }
 
 .content3 .content3_header .btn_one {
-  border-radius: 15px;
+  border-radius: 16.85px;
   position: relative;
   transition: all 0.3s ease;
   z-index: 1;
@@ -65,7 +65,7 @@
 
 .content3 .content3_header .btn_two {
   background-color: rgb(39, 40, 40);
-  border-radius: 15px;
+  border-radius: 16.85px;
   position: relative;
   margin-left: -15px;
   padding-left: 4rem;
@@ -234,14 +234,12 @@
   background-color: rgb(15, 16, 16);
   border: 1px solid white;
   color: white;
-  border-radius: 15px !important;
+  border-radius: 16.85px !important;
   margin-right: -10px;
   z-index: 1;
   flex: 1;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
-  border-top-right-radius: 15px !important;
-  border-bottom-right-radius: 15px !important;
 }
 
 .content3 .input-group .custom-input::placeholder {
