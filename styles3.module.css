@@ -67,9 +67,7 @@
   background-color: rgb(39, 40, 40);
   border-radius: 16.85px;
   position: relative;
-  margin-left: -15px;
-  padding-left: 4rem;
-  padding-right: 2rem;
+  margin-left: -25px;
   transition: all 0.3s ease;
   z-index: 1;
 }
@@ -89,6 +87,27 @@
   background-color: #ffffff;
   color: #000000;
   font-weight: 600 !important;
+}
+
+/* Одинаковые отступы для обеих кнопок на ПК версии */
+@media (min-width: 992px) {
+  .content3 .content3_header .btn_one {
+    padding: 0.7rem 1.8rem;
+  }
+
+  .content3 .content3_header .btn_two {
+    padding: 0.7rem 1.8rem;
+  }
+
+  /* Добавляем padding-left для неактивной кнопки справа */
+  .content3 .content3_header .btn_two.inactive-padding-left {
+    padding-left: 3rem;
+  }
+
+  /* Добавляем padding-right для неактивной кнопки слева */
+  .content3 .content3_header .btn_one.inactive-padding-right {
+    padding-right: 3rem;
+  }
 }
 
 .content3 .content3_header .btn-right {
@@ -118,8 +137,18 @@
 
   .content3 .content3_header .btn_two {
     font-size: 17px;
-    padding: 0.8rem 2.2rem 0.8rem 4.5rem;
-    margin-left: -18px;
+    padding: 0.8rem 1.8rem;
+    margin-left: -28px;
+  }
+
+  /* Добавляем padding-left для неактивной кнопки справа */
+  .content3 .content3_header .btn_two.inactive-padding-left {
+    padding-left: 3rem;
+  }
+
+  /* Добавляем padding-right для неактивной кнопки слева */
+  .content3 .content3_header .btn_one.inactive-padding-right {
+    padding-right: 3rem;
   }
 
   .content3 .content3_header .btn-right {
@@ -144,9 +173,19 @@
 
   .content3 .content3_header .btn_two {
     font-size: 18px;
-    padding: 0.8rem 2.5rem 0.8rem 5rem;
+    padding: 0.8rem 2rem;
     margin-left: -20px;
     border-radius: 18px;
+  }
+
+  /* Добавляем padding-left для неактивной кнопки справа */
+  .content3 .content3_header .btn_two.inactive-padding-left {
+    padding-left: 3rem;
+  }
+
+  /* Добавляем padding-right для неактивной кнопки слева */
+  .content3 .content3_header .btn_one.inactive-padding-right {
+    padding-right: 3rem;
   }
 
   .content3 .content3_header .btn-right {
@@ -172,9 +211,19 @@
 
   .content3 .content3_header .btn_two {
     font-size: 20px;
-    padding: 1rem 3rem 1rem 6rem;
+    padding: 1rem 2.5rem;
     margin-left: -25px;
     border-radius: 20px;
+  }
+
+  /* Добавляем padding-left для неактивной кнопки справа */
+  .content3 .content3_header .btn_two.inactive-padding-left {
+    padding-left: 3rem;
+  }
+
+  /* Добавляем padding-right для неактивной кнопки слева */
+  .content3 .content3_header .btn_one.inactive-padding-right {
+    padding-right: 3rem;
   }
 
   .content3 .content3_header .btn-right {

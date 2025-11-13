@@ -279,6 +279,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const textOne = 'Предстоящие';
         const textTwo = 'Прошедшие';
 
+        // Функция для проверки, является ли устройство мобильным
+        function isMobile() {
+            return window.innerWidth < 992;
+        }
+
         // Функция для активации кнопки
         function activateButton(activeBtn, inactiveBtn) {
             // Убираем классы active у обеих кнопок
@@ -289,13 +294,34 @@ document.addEventListener('DOMContentLoaded', () => {
             btnOne.classList.remove('btn-light', 'btn-dark');
             btnTwo.classList.remove('btn-light', 'btn-dark');
 
+            // Убираем классы для padding на ПК
+            btnOne.classList.remove('inactive-padding-right');
+            btnTwo.classList.remove('inactive-padding-left');
+
             // Добавляем активному btn-light и active (z-index управляется через CSS класс active)
             activeBtn.classList.add('active', 'btn-light');
             inactiveBtn.classList.add('btn-dark');
 
-            // Устанавливаем тексты
-            activeBtn.textContent = activeBtn === btnOne ? `${textOne} турниры` : `${textTwo} турниры`;
-            inactiveBtn.textContent = inactiveBtn === btnOne ? textOne : textTwo;
+            // Устанавливаем тексты в зависимости от размера экрана
+            const mobile = isMobile();
+            if (mobile) {
+                // На мобильных: активная кнопка показывает "турниры", неактивная - нет
+                activeBtn.textContent = activeBtn === btnOne ? `${textOne} турниры` : `${textTwo} турниры`;
+                inactiveBtn.textContent = inactiveBtn === btnOne ? textOne : textTwo;
+            } else {
+                // На ПК: обе кнопки показывают "турниры"
+                activeBtn.textContent = activeBtn === btnOne ? `${textOne} турниры` : `${textTwo} турниры`;
+                inactiveBtn.textContent = inactiveBtn === btnOne ? `${textOne} турниры` : `${textTwo} турниры`;
+                
+                // Добавляем padding для неактивной кнопки на ПК
+                if (inactiveBtn === btnTwo) {
+                    // Если неактивной становится кнопка справа, добавляем padding-left
+                    btnTwo.classList.add('inactive-padding-left');
+                } else if (inactiveBtn === btnOne) {
+                    // Если неактивной становится кнопка слева, добавляем padding-right
+                    btnOne.classList.add('inactive-padding-right');
+                }
+            }
         }
 
         // Инициализация: активируем первую кнопку по умолчанию
@@ -316,6 +342,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!btnTwo.classList.contains('active')) {
                 activateButton(btnTwo, btnOne);
             }
+        });
+
+        // Обработчик изменения размера окна для обновления текста кнопок
+        window.addEventListener('resize', () => {
+            const activeBtn = btnOne.classList.contains('active') ? btnOne : btnTwo;
+            const inactiveBtn = btnOne.classList.contains('active') ? btnTwo : btnOne;
+            activateButton(activeBtn, inactiveBtn);
         });
     }
 
